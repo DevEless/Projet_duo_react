@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const SideBar = () => {
+  const [liTxt , setLiTxt] = useState("YOUR INFO");
+
+  // function getLiTxt(e) {
+  //   setLiTxt(
+  //     e.target.textContent
+  //   )
+  // }
+  
   return (
     <div>
         <ul>
