@@ -1,7 +1,7 @@
 import { useState } from "react";
-import  AddOns  from "./components/AddOns";
-import  Info  from "./components/Info";
-import  Plan  from "./components/Plan";
+import AddOns from "./components/AddOns";
+import Info from "./components/Info";
+import Plan from "./components/Plan";
 import { SideBar } from "./components/sideBar";
 import { Summary } from "./components/summary";
 import { ThankYou } from "./components/thankYou";
@@ -12,7 +12,7 @@ import './style/app.css'
 
 export default function App() {
 
-  const [liTxt , setLiTxt] = useState("info");
+  const [liTxt, setLiTxt] = useState("info");
   const liArr = ["info", "plan", "add", "summary", "thankYou"];
 
   //data from plan
@@ -32,9 +32,9 @@ export default function App() {
 
 
   //Next btn function
-  function next(e) { 
+  function next(e) {
     //Use state for conditionnal dispaly    
-    setLiTxt(     
+    setLiTxt(
       liArr[liArr.indexOf(liTxt) + 1]
     )
     // Active manipulation
@@ -48,32 +48,39 @@ export default function App() {
   }
 
   //Back btn function
-  function back(e) {  
+  function back(e) {
     //Use state for conditionnal dispaly     
-    setLiTxt(     
+    setLiTxt(
       liArr[liArr.indexOf(liTxt) - 1]
     )
     // Active manipulation
     let activeStep = document.querySelector(".activeStep");
     let steps = document.querySelectorAll(".numStep");
     activeStep.classList.remove("activeStep");
-    steps[liArr.indexOf(liTxt)- 1].classList.add("activeStep");
-  } 
-  
+    steps[liArr.indexOf(liTxt) - 1].classList.add("activeStep");
+  }
+
+  // oo.map((item)=>{
+  //   setNb(
+  //     [...nb, item]
+  //   )
+  // })
+
   return (
     <div className="contain">
 
-    <div id="app" className="flex">
-      <SideBar step={liTxt}/>
+      <div id="app" className="flex">
+        <SideBar step={liTxt} />
 
-      <div id="stepSect">
-        {liTxt == "info" ? <Info/> : liTxt == "plan" ? <Plan setDataPlan={setDataPlan} dataPlan={dataPlan}/> : liTxt == "add" ? <AddOns dataPlan={dataPlan}/> : liTxt == "summary" ? <Summary change={change}/> : liTxt == "thankYou" ? <ThankYou/> : null} 
+        <div id="stepSect">
 
-        {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 2 ? <button className="btnNext" onClick={next}>Confirm</button> : <button className="btnNext" onClick={next}>Next Step</button>}
+          {liTxt == "info" ? <Info /> : liTxt == "plan" ? <Plan setDataPlan={setDataPlan} dataPlan={dataPlan} /> : liTxt == "add" ? <AddOns dataPlan={dataPlan} dataAdd={dataAdd} setDataAdd={setDataAdd} /> : liTxt == "summary" ? <Summary change={change} dataPlan={dataPlan} dataAdd={dataAdd} /> : liTxt == "thankYou" ? <ThankYou /> : null}
 
-        {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 0 ? <button className="btnBack" onClick={back}>Go Back</button> : null}
+          {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 2 ? <button className="btnNext" onClick={next}>Confirm</button> : <button className="btnNext" onClick={next}>Next Step</button>}
+
+          {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 0 ? <button className="btnBack" onClick={back}>Go Back</button> : null}
+        </div>
       </div>
-    </div>
     </div>
   )
 }

@@ -4,8 +4,16 @@ import '../style/AddOns.css';
 import React, {useState} from "react";
 
 
-const AddOns = ({dataPlan}) => {
-
+const AddOns = ({dataPlan , setDataAdd , dataAdd}) => {
+    const handleChange = (e) => {
+        if (e.target.checked) {
+            if(dataAdd.includes(e.target.value) == false) {
+                setDataAdd([...dataAdd, e.target.value])
+            }
+        } else {
+            setDataAdd(dataAdd.filter((item)=> item !== e.target.value))
+        }
+    }
 
     return (
         <div className="app">
@@ -17,7 +25,7 @@ const AddOns = ({dataPlan}) => {
 
             <div className="add">
             <label>
-                <input type="checkbox" />
+                <input type="checkbox" value={dataPlan.includes('mo')?  'Online Service*+$1/mo': 'Online Service*+$10/yr'} onChange={handleChange}/>
             </label>
             <span>
             <h3>Online Service</h3>
@@ -29,10 +37,12 @@ const AddOns = ({dataPlan}) => {
             </div>
             <br></br>
             <div className="add">
-            <Checkbox /> 
+            <label>
+                <input type="checkbox" value={dataPlan.includes('mo')? 'Larger storage*+$2/mo': 'Larger storage*+$20/yr'} onChange={handleChange}/>
+            </label>
             <span>
-            <h3>Online Service</h3>
-            <p>Multiplayer free Service</p>
+            <h3>Larger storage</h3>
+            <p>Extra 1TB of cloud save</p>
             </span>
             <h4>
                 {dataPlan.includes('mo')? '+$2/mo': '+$20/yr'}
@@ -40,10 +50,12 @@ const AddOns = ({dataPlan}) => {
             </div>
             <br></br>
             <div className="add">
-            <Checkbox /> 
+            <label>
+                <input type="checkbox" value={dataPlan.includes('mo')? 'Customizable Profile*+$2/mo': 'Customizable Profile*+$20/yr'} onChange={handleChange}/>
+            </label> 
             <span>
-            <h3>Online Service</h3>
-            <p>Multiplayer free Service</p>
+            <h3>Customizable Profile</h3>
+            <p>Custom theme on your profile</p>
             </span>
             <h4>
                 {dataPlan.includes('mo')? '+$2/mo': '+$20/yr'}

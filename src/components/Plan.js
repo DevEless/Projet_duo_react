@@ -29,7 +29,7 @@ return (
 <p>Please provide your name, email adress, and phone number</p>
 </div>
 <div className='cont'>
-<div onClick={()=> setDataPlan(prix1)} className="Plan1" >
+<div onClick={()=> setDataPlan('Arcade '+prix1)} className="Plan1" >
 <div className='icon1'>
 <i className="fa-solid fa-jet-fighter"></i>
 </div>
