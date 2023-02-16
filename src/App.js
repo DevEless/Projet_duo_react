@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { AddOns } from "./components/addOns";
-import { Info } from "./components/info";
-import { Plan } from "./components/plan";
+import  AddOns  from "./components/AddOns";
+import  Info  from "./components/Info";
+import  Plan  from "./components/Plan";
 import { SideBar } from "./components/sideBar";
 import { Summary } from "./components/summary";
 import { ThankYou } from "./components/thankYou";
+
 
 import './style/app.css'
 
