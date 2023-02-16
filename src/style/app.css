@@ -1,0 +1,35 @@
+#app {
+    width: 100%;
+    height: 564px;
+}
+
+#stepSect {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.btnNext {
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    padding: 10px 15px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.btnNext:hover {
+    background-color: hsl(213, 98%, 32%);
+}
+
+.btnBack {
+    color: black;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
