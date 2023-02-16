@@ -1,0 +1,9 @@
+.add{
+    height: 80px;
+    width: 480px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}

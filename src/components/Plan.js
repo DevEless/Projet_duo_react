@@ -1,30 +1,36 @@
-import React from 'react';
-import '../style/Plan.css';
 
-const prixAnnéesArcade = '90/yr';
-const prixAnnéesAdvanced = '120/yr';
-const prixAnnéesPro = '150/yr';
-const prixMoisArcade = '9/mt';
-const prixMoisAdvanced = '12/mt';
-const prixMoisPro = '15/mt';
+import '../style/Plan.css';
+import React, { useState, useEffect } from 'react';
+
 
 class Plan extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       isOn: false
     };
-
     this.handleClick = this.handleClick.bind(this);
   }
-
+  
   handleClick() {
     this.setState(prevState => ({
       isOn: !prevState.isOn
     }));
+    const duration = this.state.isOn ? 'yearly' : 'monthly';
+
   }
 
+  
+  
   render() {
+
+    const prixAnnéesArcade = '90/yr';
+    const prixAnnéesAdvanced = '120/yr';
+    const prixAnnéesPro = '150/yr';
+    const prixMoisArcade = '9/mo';
+    const prixMoisAdvanced = '12/mo';
+    const prixMoisPro = '15/mo';
     const prix1 = this.state.isOn ? prixAnnéesArcade : prixMoisArcade;
     const prix2 = this.state.isOn ? prixAnnéesAdvanced : prixMoisAdvanced;
     const prix3 = this.state.isOn ? prixAnnéesPro : prixMoisPro;
@@ -34,50 +40,39 @@ class Plan extends React.Component {
     return (
       <div>
         <div className='cont'>
-
-          <div className="Plan">
+          <div className="Plan1" >
             <div className='icon1'>
-            <i class="fa-solid fa-jet-fighter"></i>
-
+              <i className="fa-solid fa-jet-fighter"></i>
             </div>
             <span className='txt'>
-
-            <h4>Arcade</h4>
-            <p>
-              $ {prix1}
-            </p>
+              <h4>Arcade</h4>
+              <p>$ {prix1}</p>
             </span>
           </div>
-          <div className="Plan">
+          <div className="Plan2">
             <div className='icon2'>
-            <i class="fa-solid fa-gamepad"></i>
-
+              <i className="fa-solid fa-gamepad"></i>
             </div>
             <span className='txt'>
-
-            <h4>Advanced</h4>
-            <p>
-              $ {prix2}
-            </p>
+              <h4>Advanced</h4>
+              <p>$ {prix2}</p>
             </span>
           </div>
-          <div className="Plan">
-            <div className='icon3'>
-            <i class="fa-brands fa-simplybuilt"></i>
+          <div className="Plan3">
 
+
+            
+            <div className='icon3'>
+              <i className="fa-brands fa-simplybuilt"></i>
             </div>
             <span className='txt'>
-            <h4>Pro</h4>
-            <p>
-              $ {prix3}
-            </p>
-
+              <h4>Pro</h4>
+              <p>$ {prix3}</p>
             </span>
           </div>
         </div>
-        <div className='container'> 
+        <div className='container'>
           <p className={monthlyClass}>Monthly</p>
-
           <label className="switch">
             <input type="checkbox" checked={this.state.isOn} onChange={this.handleClick} />
             <span className="slider round"></span>

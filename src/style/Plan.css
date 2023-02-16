@@ -58,7 +58,23 @@ input:checked+.slider:before {
     justify-content: space-center;
     align-items: center;
 }
-.Plan{
+.Plan1{
+    border:solid 1px rgb(178, 178, 178);
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 15px;
+}
+.Plan2{
+    border:solid 1px rgb(178, 178, 178);
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 15px;
+}
+.Plan3{
     border:solid 1px rgb(178, 178, 178);
     height: 160px;
     width: 140px;
@@ -121,4 +137,35 @@ p{
 .txt{
     position: absolute;
     top:100px;
+}
+
+.Plan1:hover{
+    border:solid 1px rgb(255, 193, 193);
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 15px;
+    cursor:pointer;
+    background-color: hsl(229, 24%, 87%);
+}
+.Plan2:hover{
+    border:solid 1px rgb(255, 193, 193);
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 15px;
+    cursor:pointer;
+    background-color: hsl(229, 24%, 87%);
+}
+.Plan3:hover{
+    border:solid 1px rgb(255, 193, 193);
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 15px;
+    cursor:pointer;
+    background-color: hsl(229, 24%, 87%);
 }
