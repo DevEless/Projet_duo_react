@@ -119,13 +119,14 @@ i{
     
 }
 .container{
-    margin-top: 2%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
     width: 490px;
     background-color: hsl(206, 96%, 91%);
+
 }
 .active {
     color: rgb(0, 30, 255);
