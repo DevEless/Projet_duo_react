@@ -15,6 +15,17 @@ export default function App() {
   const [liTxt , setLiTxt] = useState("info");
   const liArr = ["info", "plan", "add", "summary", "thankYou"];
 
+
+  //change btn function in summary
+  function change() {
+    setLiTxt('plan');
+    let activeStep = document.querySelector(".activeStep");
+    let steps = document.querySelectorAll(".numStep");
+    activeStep.classList.remove("activeStep");
+    steps[liArr.indexOf('plan')].classList.add("activeStep");
+  }
+
+
   //Next btn function
   function next(e) { 
     //Use state for conditionnal dispaly    
@@ -49,7 +60,7 @@ export default function App() {
       <SideBar step={liTxt}/>
 
       <div id="stepSect">
-        {liTxt == "info" ? <Info/> : liTxt == "plan" ? <Plan/> : liTxt == "add" ? <AddOns/> : liTxt == "summary" ? <Summary/> : liTxt == "thankYou" ? <ThankYou/> : null} 
+        {liTxt == "info" ? <Info/> : liTxt == "plan" ? <Plan/> : liTxt == "add" ? <AddOns/> : liTxt == "summary" ? <Summary change={change}/> : liTxt == "thankYou" ? <ThankYou/> : null} 
 
         {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 2 ? <button className="btnNext" onClick={next}>Confirm</button> : <button className="btnNext" onClick={next}>Next Step</button>}
 
