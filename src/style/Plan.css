@@ -57,6 +57,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: space-center;
     align-items: center;
+    margin-top: 15%;
 }
 .Plan1{
     border:solid 1px rgb(178, 178, 178);
@@ -118,13 +119,14 @@ i{
     
 }
 .container{
-    margin-top: 2%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
     width: 490px;
     background-color: hsl(206, 96%, 91%);
+
 }
 .active {
     color: rgb(0, 30, 255);
@@ -136,7 +138,7 @@ p{
 
 .txt{
     position: absolute;
-    top:100px;
+    top:290px;
 }
 
 .Plan1:hover{
@@ -168,4 +170,10 @@ p{
     padding: 15px;
     cursor:pointer;
     background-color: hsl(229, 24%, 87%);
+}
+
+.TH1{
+    margin-top: 5%;
+    font-size: 300%;
+    color: hsl(213, 96%, 18%);
 }

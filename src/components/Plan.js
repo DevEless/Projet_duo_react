@@ -39,6 +39,10 @@ class Plan extends React.Component {
 
     return (
       <div>
+                      <div className='Titre'>
+                    <h1 className='TH1'>Select your</h1>
+                    <p>Please provide your name, email adress, and phone number</p>
+                    </div>
         <div className='cont'>
           <div className="Plan1" >
             <div className='icon1'>
