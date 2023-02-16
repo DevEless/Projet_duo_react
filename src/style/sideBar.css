@@ -1,0 +1,44 @@
+#sideBar {
+    position: relative;
+    width: 274px;
+}
+
+#sideBar ul {
+    position: absolute;
+    top: 0;
+    margin: 40px;
+}
+
+#sideBar ul li {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.numStep{
+    border: 2px solid white;
+    color: white;
+    border-radius: 100%;
+    padding: 8px 16px;
+}
+
+.activeStep {
+    border: 2px solid gray;
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+
+.txtStep{
+    margin-left: 20px;
+}
+
+.txtStep p {
+    margin: 0;
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.txtStep h3 {
+    margin: 0;
+    color: white;
+}
