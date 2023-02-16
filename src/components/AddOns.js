@@ -21,7 +21,7 @@ const AddOns = () => {
             <h3>Online Service</h3>
             <p>Multiplayer free Service</p>
             </span>
-            <h4>{<Plan prix1/>}</h4>
+            <h4>Mo</h4>
             </div>
             <br></br>
             <div className="add">
