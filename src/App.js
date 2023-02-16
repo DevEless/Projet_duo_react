@@ -15,6 +15,11 @@ export default function App() {
   const [liTxt , setLiTxt] = useState("info");
   const liArr = ["info", "plan", "add", "summary", "thankYou"];
 
+  //data from plan
+  const [dataPlan, setDataPlan] = useState('');
+  //data from add-ons
+  const [dataAdd, setDataAdd] = useState([]);
+
 
   //change btn function in summary
   function change() {
@@ -62,7 +67,7 @@ export default function App() {
       <SideBar step={liTxt}/>
 
       <div id="stepSect">
-        {liTxt == "info" ? <Info/> : liTxt == "plan" ? <Plan/> : liTxt == "add" ? <AddOns/> : liTxt == "summary" ? <Summary change={change}/> : liTxt == "thankYou" ? <ThankYou/> : null} 
+        {liTxt == "info" ? <Info/> : liTxt == "plan" ? <Plan setDataPlan={setDataPlan} dataPlan={dataPlan}/> : liTxt == "add" ? <AddOns dataPlan={dataPlan}/> : liTxt == "summary" ? <Summary change={change}/> : liTxt == "thankYou" ? <ThankYou/> : null} 
 
         {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 2 ? <button className="btnNext" onClick={next}>Confirm</button> : <button className="btnNext" onClick={next}>Next Step</button>}
 

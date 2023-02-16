@@ -4,7 +4,7 @@ import '../style/AddOns.css';
 import React, {useState} from "react";
 
 
-const AddOns = () => {
+const AddOns = ({dataPlan}) => {
 
 
     return (
@@ -16,12 +16,16 @@ const AddOns = () => {
                     <div className="ST9">
 
             <div className="add">
-            <Checkbox /> 
+            <label>
+                <input type="checkbox" />
+            </label>
             <span>
             <h3>Online Service</h3>
             <p>Multiplayer free Service</p>
             </span>
-            <h4>Mo</h4>
+            <h4>
+                {dataPlan.includes('mo')? '+$1/mo': '+$10/yr'}
+            </h4>
             </div>
             <br></br>
             <div className="add">
@@ -30,7 +34,9 @@ const AddOns = () => {
             <h3>Online Service</h3>
             <p>Multiplayer free Service</p>
             </span>
-            <h4>/mo</h4>
+            <h4>
+                {dataPlan.includes('mo')? '+$2/mo': '+$20/yr'}
+            </h4>
             </div>
             <br></br>
             <div className="add">
@@ -39,7 +45,9 @@ const AddOns = () => {
             <h3>Online Service</h3>
             <p>Multiplayer free Service</p>
             </span>
-            <h4></h4>
+            <h4>
+                {dataPlan.includes('mo')? '+$2/mo': '+$20/yr'}
+            </h4>
             </div>
                     </div>
         </div>
