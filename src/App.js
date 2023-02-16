@@ -43,8 +43,10 @@ export default function App() {
     activeStep.classList.remove("activeStep");
     steps[liArr.indexOf(liTxt)- 1].classList.add("activeStep");
   } 
-
+  
   return (
+    <div className="contain">
+
     <div id="app" className="flex">
       <SideBar step={liTxt}/>
 
@@ -55,6 +57,7 @@ export default function App() {
 
         {liArr.indexOf(liTxt) == 4 ? null : liArr.indexOf(liTxt) > 0 ? <button className="btnBack" onClick={back}>Go Back</button> : null}
       </div>
+    </div>
     </div>
   )
 }

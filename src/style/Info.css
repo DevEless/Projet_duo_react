@@ -1,6 +1,14 @@
-input{
-    width: 400px;
-    height: 40px;
-    border-radius: 7px;
-    border: 1px solid #ccc;
+.input{
+    width: 400px !important;
+    height: 40px !important;
+    border-radius: 7px !important;
+    border: 1px solid #ccc !important;
+}
+.TH1{
+    margin-top: 5%;
+    font-size: 300%;
+    color: hsl(213, 96%, 18%);
+}
+form{
+    margin-top: 5%;
 }

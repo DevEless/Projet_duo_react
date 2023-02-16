@@ -1,5 +1,5 @@
 #app {
-    width: 100%;
+    width: 65%;
     height: 564px;
 }
 
@@ -32,4 +32,11 @@
     position: absolute;
     left: 0;
     bottom: 0;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }

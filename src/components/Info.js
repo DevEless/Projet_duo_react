@@ -29,25 +29,32 @@ class Info extends React.Component {
 
     render() {
         return (
+            <div>
+                <div className='Titre'>
+                    <h1 className='TH1'>Personnal info</h1>
+                    <p>Please provide your name, email adress, and phone number</p>
+                </div>
+
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Your name is: "{this.state.name}"
                     <br />
-                    <input type="text" value={this.state.name} onChange={this.handleNameChange} />
+                    <input className='input' type="text" value={this.state.name} onChange={this.handleNameChange} />
                 </label>
                 <br />
                 <label>
                     Your Email is: "{this.state.email}"
                     <br />
-                    <input type="text" value={this.state.email} onChange={this.handleEmailChange} />
+                    <input className='input' type="text" value={this.state.email} onChange={this.handleEmailChange} />
                 </label>
                 <br />
                 <label>
                     Your phone number is: "{this.state.phone}"
                     <br />
-                    <input type="text" value={this.state.phone} onChange={this.handlePhoneChange} />
+                    <input className='input' type="text" value={this.state.phone} onChange={this.handlePhoneChange} />
                 </label>
             </form>
+            </div>
         );
     }
 }
